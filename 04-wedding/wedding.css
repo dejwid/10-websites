@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+:root{
+    --green: #567C6D;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: sans-serif;
+}
+h1,h2{
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+h1{
+    text-transform: uppercase;
+}
+h2{
+    color: var(--green);
+    font-weight: 400;
+    font-size:2rem;
+    position: relative;
+    margin-bottom: 60px;
+}
+h2 span{
+    opacity: 0.1;
+    position: absolute;
+    margin-top:-4rem;
+    margin-left:-2.4rem;
+    font-size:8rem;
+}
+
+
+header{
+    padding: 20px;
+}
+div.header-navigations{
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+div.header-navigations a{
+    color: var(--green);
+    text-decoration: none;
+}
+div.header-navigations a.logo{
+    text-align: center;
+    font-family: serif;
+    font-size: 2rem;
+}
+div.header-navigations nav a{
+    margin: 0 4px;
+}
+div.header-navigations nav:nth-child(3){
+    text-align: right;
+}
+
+div.cta{
+    background-image: url('cta2.jpg');
+    background-position: center center;
+    background-size: cover;
+    color:#fff;
+    text-align: center;
+}
+div.cta div.content{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 100px 50px;
+}
+div.cta div.content div.center{
+    max-width:700px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 700px) {
+    div.cta div.content{
+        padding: 80px 20px;
+    }
+}
+div.cta div.content p{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+div.cta div.content h1{
+    font-size:3rem;
+}
+div.cta div.content a.btn{
+    color:#fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 14px 30px;
+    text-transform:uppercase;
+}
+
+section{
+    margin: 100px auto;
+    max-width: 780px;
+}
+section#about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 0 20px;
+    align-items: center;
+}
+@media screen and (max-width: 700px) {
+    section#about{
+        grid-template-columns: 1fr;
+    }
+}
+section#about p{
+    color: #888;
+    margin: 20px 0;
+}
+
+
+section#services{
+    padding: 0 20px;
+}
+div.services{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+    max-width:100%;
+    overflow-x: scroll;
+    overflow-y: visible;
+    padding-bottom: 50px;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+a.service{
+    display: inline-block;
+    width: 300px;
+    text-decoration: none;
+    scroll-snap-align: start;
+}
+@media screen and (max-width: 700px) {
+    div.services{
+        gap: 20px;
+    }
+    a.service{
+        width: 140px;
+    }
+}
+a.service h3{
+    text-align: center;
+    color: #555;
+    margin-top: 10px;
+}
+a.service:nth-child(odd) {
+    position: relative;
+    top: 40px;
+}
+
+section#stages{
+    padding: 0 20px;
+}
+section#stages h2{
+    text-align:center;
+}
+
+div.stage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 700px) {
+    div.stage{
+        grid-template-columns: 1fr;
+    }
+}
+div.stage ol{
+    list-style-type: none;
+}
+div.stage ol li{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+div.stage ol li h3{
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#555;
+}
+div.stage ol li span{
+    clear: both;
+    float: left;
+    font-size:5rem;
+    line-height: 3.6rem;
+    display: inline-block;
+    padding: 0 30px 60px 0;
+    font-weight: 300;
+    opacity:.2;
+    font-family:  'Roboto Slab', serif;
+    color: var(--green);
+}
+div.stage p{
+    color:#555;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+@media screen and (min-width: 600px) {
+    div.stage:nth-child(odd) ol{
+        order:5;
+    }
+}

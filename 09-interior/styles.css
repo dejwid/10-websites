@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+img{
+    max-width:100%;
+}
+body{
+    font-family:'Roboto',sans-serif;
+}
+h2,h3{
+    text-transform:uppercase;
+    text-align:center;
+    font-weight:normal;
+}
+h2{
+    color:#000;
+    font-size:1.6rem;
+}
+h3{
+    color:#bbb;
+    font-size:0.8rem;
+    margin-bottom: 40px;
+}
+section{
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+section#services, section#newsletter{
+    background-color:#F5F5F5;
+}
+.two-columns,.three-columns{
+    display: grid;
+    gap: 30px;
+    align-items: center;
+}
+.two-columns{
+    grid-template-columns: 1fr 1fr;
+}
+.three-columns{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 700px) {
+    .two-columns{
+        grid-template-columns: 1fr;
+    }
+    .three-columns{
+        grid-template-columns: 1fr;
+    }
+}
+
+.center{
+    max-width:700px;
+    margin:0 auto;
+    padding: 0 20px;
+}
+.header-content{
+    display:flex;
+    width: 100%;
+    justify-content:space-between;
+}
+header{
+    position:absolute;
+    width:100%;
+}
+header a{
+    padding: 20px 5px;
+    display:inline-block;
+}
+header nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#333;
+    font-weight:300;
+}
+header nav a.active{
+    background-color: #F8BE58;
+    color:#fff;
+}
+header a.logo, header a.phone{
+    text-decoration: none;
+    color:black;
+}
+@media screen and (max-width: 700px) {
+    header div.header-content{
+        flex-wrap: wrap;
+    }
+    header nav{
+        order:5;
+        text-align: center;
+        width: 100%;
+        display:flex;
+    }
+    header a{
+        padding: 5px;
+    }
+    header nav a{
+        flex-grow: 1;
+    }
+}
+
+section#intro{
+    background-image: url('intro.jpg');
+    background-position: center center;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+section#intro h1{
+    text-transform:uppercase;
+    font-size:3rem;
+    margin-bottom: 14px;
+}
+section#intro h2{
+    font-size: .8rem;
+    text-transform:uppercase;
+    font-weight:normal;
+    margin-bottom: 14px;
+    text-align: left;
+}
+@media screen and (max-width: 700px) {
+    section#intro h1{
+        font-size:2rem;
+    }
+    section#intro h2{
+        font-size: .7rem;
+    }
+}
+.button{
+    background-color:#F8BE58;
+    border:0;
+    color:#fff;
+    padding: 8px 20px;
+    min-width: 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+section#about h4{
+    font-size: 1.4rem;
+    font-weight: normal;
+    color:#333;
+    margin-bottom: 10px;
+}
+section#about p{
+    font-size: .7rem;
+    color:#666;
+    line-height: 1rem;
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 700px) {
+    section#about .two-columns div:first-child{
+        order:2;
+    }
+}
+
+section#news img{
+    display: block;
+}
+div.date{
+    color:#fff;
+    background-color:#F8BE58;
+    padding: 7px;
+    text-align: center;
+}
+div.news-entry{
+    margin: 20px 0;
+}
+div.news-entry a{
+    color:#000;
+}
+div.news-entry p{
+    font-size: .8rem;
+    color:#777;
+    line-height: 1.2rem;
+    margin-bottom:10px;
+    margin-top:10px;
+}
+div.news-entry div.date{
+    background-color:transparent;
+    color:#F8BE58;
+    text-align: left;
+    padding:0;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+section#newsletter{
+    padding-bottom: 0;
+}
+section#newsletter img{
+    display: block;
+}
+section#newsletter form{
+    display: flex;
+    max-width: 400px;
+    padding: 0 20px;
+    margin: 0 auto 50px;
+}
+section#newsletter form input{
+    border:0;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+footer{
+    background-color:#2A2A2A;
+    color:#ddd;
+}
+footer h3{
+    color:#fff;
+    text-align:left;
+    font-size: 1.2rem;
+    margin-bottom:10px;
+}
+footer p{
+    font-size: .8rem;
+    line-height:1.2rem;
+    color:#aaa;
+}
+footer a{
+    color:#ccc;
+    display: block;
+    margin-bottom: 4px;
+}
+footer p a{
+    display: inline;
+}
+footer div.columns{
+    display:grid;
+    padding: 20px 0;
+    gap: 20px;
+    grid-template-columns: 1fr 0.4fr 0.5fr;
+}
+@media screen and (max-width: 700px) {
+    footer div.columns{
+        grid-template-columns: 1fr;
+    }
+}
